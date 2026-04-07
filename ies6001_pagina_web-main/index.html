@@ -1,0 +1,177 @@
+<!doctype html> 
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>IES 6001 - Instituto de Educación Superior - Salta</title>
+
+  <style>
+    /* Estilo de tu firma mejorada */
+    .autor-texto {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      color: #002855;
+      line-height: 1.2;
+      border-left: 2px solid #0273d3;
+      padding-left: 12px;
+      margin-left: 10px;
+    }
+    .autor-nombre { display: block; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .autor-dni { font-size: 0.85rem; color: #555; }
+
+    /* Estilo para acordeón de carreras */
+    .theme__block_single_content {
+      display: none;
+      padding: 20px;
+      background: #111;
+      border-left: 4px solid #007bff;
+      margin-top: 10px;
+      border-radius: 0 10px 10px 0;
+    }
+    .theme__block_single_content.is-content-active { display: block; animation: fadeIn .4s ease; }
+    .theme__block_single_content h3 { color: #fff; font-size: 1.2rem; }
+    .theme__block_single_content p, .theme__block_single_content li { color: #ccc; font-size: 0.95rem; }
+
+    @keyframes fadeIn { from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none} }
+
+    /* === CARRUSEL === */
+    .main__wrapper { position: relative; width: 100%; height: 500px; overflow: hidden; }
+    .main-carousel, .carousel-cell { width: 100%; height: 100%; }
+    .carousel-img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; display: block; }
+
+    /* === TÍTULO CENTRADO === */
+    .main__inner_container {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%); /* Centrado exacto */
+      text-align: center;
+      z-index: 10;
+      width: 90%;
+      max-width: 750px;
+      padding: 16px 22px;
+      background: rgba(0, 0, 0, 0.65);
+      border-radius: 14px;
+      backdrop-filter: blur(10px);
+    }
+    .main__inner_headline { color: white !important; font-size: 2.1rem !important; font-weight: 800 !important; }
+    .main__inner_description { color: #e8e8e8 !important; font-size: 1rem !important; }
+
+    @media (max-width: 576px) {
+      .main__inner_container { bottom: 40px; }
+      .main__inner_headline { font-size: 1.55rem !important; }
+    }
+  </style>
+</head>
+
+<body>
+<div class="wrapper">
+
+  <header id="header" class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light for__pc">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="img/logo.png" alt="Logo IES 6001" style="height: 55px;">
+          <div class="autor-texto d-none d-sm-block">
+            <span class="autor-nombre">Creada por Ignacio Ruiz</span>
+            <span class="autor-dni">DNI: 39.040.338</span>
+          </div>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="institucional.html">Institucional</a></li>
+            <li class="nav-item"><a class="nav-link" href="ubicacion.html">Ubicación</a></li>
+            <li class="nav-item"><a class="nav-link" href="autoridades.html">Autoridades</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="btn btn-sm btn-primary nav-btn" href="campus_virtual.html">Campus Virtual</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="main" class="main">
+    <div class="main__wrapper">
+      <div class="main-carousel" data-flickity='{"autoPlay": 4000, "wrapAround": true, "imagesLoaded": true, "pageDots": true, "prevNextButtons": true, "fade": true}'>        
+        <div class="carousel-cell"><img src="img/recibidos.jpg" class="carousel-img"></div>
+        <div class="carousel-cell"><img src="img/noche.jpg" class="carousel-img"></div>
+      </div>
+      <div class="main__inner_container">
+        <h1 class="main__inner_headline">Instituto de Educación Superior N° 6001</h1>
+        <p class="main__inner_description">Formando docentes y técnicos en Salta.</p>
+      </div>
+    </div>
+  </section>
+
+  <main id="main__content">
+    <section class="theme__block">
+      <div class="theme__block_container">
+        <h2 class="theme__block_tag">Nuestra Oferta Académica</h2>
+
+        <div class="row">
+          <div class="col-12">
+            <ul class="theme__block_list">
+              <li class="theme__block_item is-toggle-active" data-tab="tab-horizontal-0">
+                <a href="javascript:void(0)" class="theme__block_link">Análisis de Sistemas</a>
+                <span class="theme__header_line"></span>
+                <div class="theme__block_single_content tab-horizontal-0 is-content-active">
+                  <h3>Tecnicatura en Sistemas</h3>
+                  <p>Formamos profesionales capaces de diseñar soluciones informáticas innovadoras.</p>
+                  <ul><li>Duración: 3 años.</li><li>Modalidad: Presencial.</li></ul>
+                  <a href="sistemas.html" class="btn btn-primary btn-sm mt-2">Ver plan de estudios</a>
+                </div>
+              </li>
+
+              <li class="theme__block_item" data-tab="tab-horizontal-1">
+                <a href="javascript:void(0)" class="theme__block_link">Ciencias Políticas</a>
+                <span class="theme__header_line"></span>
+                <div class="theme__block_single_content tab-horizontal-1">
+                  <h3>Profesorado en Ciencias Políticas</h3>
+                  <p>Formación sólida para desempeñarse en el nivel secundario.</p>
+                  <a href="politicas.html" class="btn btn-primary btn-sm mt-2">Ver plan de estudios</a>
+                </div>
+              </li>
+
+              <li class="theme__block_item" data-tab="tab-horizontal-2">
+                <a href="javascript:void(0)" class="theme__block_link">Educación Primaria</a>
+                <span class="theme__header_line"></span>
+                <div class="theme__block_single_content tab-horizontal-2">
+                  <h3>Profesorado en Educación Primaria</h3>
+                  <p>Más de 100 años formando maestros en Salta.</p>
+                  <a href="primaria.html" class="btn btn-primary btn-sm mt-2">Ver plan de estudios</a>
+                </div>
+              </li>
+
+              <li class="theme__block_item" data-tab="tab-horizontal-3">
+                <a href="javascript:void(0)" class="theme__block_link">Bibliotecología</a>
+                <span class="theme__header_line"></span>
+                <div class="theme__block_single_content tab-horizontal-3">
+                  <h3>Tecnicatura en Bibliotecología</h3>
+                  <p>Gestión de unidades de información y tecnologías aplicadas.</p>
+                  <a href="bibliotecologia.html" class="btn btn-primary btn-sm mt-2">Ver plan de estudios</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
